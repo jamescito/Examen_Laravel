@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompraController;
+//use App\Http\Controllers\Pruebacontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('compras','App\Http\Controllers\CompraController');
+
 
 Route::get('/', function () {
     return view('welcome');

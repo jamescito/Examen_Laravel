@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Models\Compra;
 use PHPUnit\Framework\TestCase;
 
 class ExampleTest extends TestCase
@@ -13,6 +14,20 @@ class ExampleTest extends TestCase
      */
     public function test_example()
     {
-        $this->assertTrue(true);
+       
+
+    
+    
     }
+    public function test_delete()
+    {
+        $compra = Compra::delete();
+
+        $view = $this->view('compra.index/1' );
+
+        $view->assertSee('');
+    }
+
+
+    
 }
